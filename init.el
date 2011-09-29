@@ -14,6 +14,7 @@
 (require 'rdj-defs)
 (require 'rdj-early-off)
 (require 'rdj-package)
+(require 'rdj-ido)
 (require 'rdj-smartsize)
 (require 'rdj-turds)
 (require 'rdj-whitespace)
