@@ -9,11 +9,13 @@
     (find-file "~/scratchfile")
     (split-window-horizontally)
     (find-file "~/.emacs.d/init.el")
+    (other-window 1)
     ))
 (add-hook 'desktop-no-desktop-file-hook 'rdj-default-initial-state)
 (add-hook 'desktop-after-read-hook (function (lambda () (progn
                                                           (split-window-horizontally)
                                                           (previous-buffer)
+                                                          (other-window 1)
                                                           ))))
 
 ;; I use window-system as a marker for this being the "main instance"
