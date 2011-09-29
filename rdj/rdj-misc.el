@@ -12,6 +12,11 @@
 ;; hippie expand weeeeee
 (eval-after-load "dabbrev" '(defalias 'dabbrev-expand 'hippie-expand))
 
+;; use ido
+(setq ido-enable-flex-matching 't
+      ido-save-directory-list-file (concat user-emacs-directory ".ido.last"))
+(ido-mode 1)
+
 ;; Use pathname to get unique buffer names instead of <2>
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)

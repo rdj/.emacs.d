@@ -27,7 +27,6 @@
 
 (require 'rdj-early-off)
 (require 'rdj-package)
-(require 'rdj-ido)
 (require 'rdj-misc)
 (require 'rdj-smartsize)
 (require 'rdj-turds)
