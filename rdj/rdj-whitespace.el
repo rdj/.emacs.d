@@ -52,4 +52,20 @@
 ;; Allow nuke-trailing-whitespace-p to be set from the modeline
 (aput 'safe-local-variable-values 'rdj-whitespace-should-cleanup-p 't)
 
+(defun rdj-toggle-whitespace-cleanup (&optional arg)
+  "Toggle whether nuke whitespace when saving the current buffer.
+With prefix argument ARG, nuke whitespace if ARG is positive,
+otherwise don't."
+  (interactive "P")
+  (setq rdj-whitespace-should-cleanup-p
+        (if (null arg)
+            (if (not rdj-whitespace-should-cleanup-p)
+                'whitespace-check-mode
+              nil)
+          (if (> (prefix-numeric-value arg) 0)
+              'whitespace-check-mode
+            nil)))
+  (message "Nuke trailing whitespace %s"
+           (if rdj-whitespace-should-cleanup-p "enabled" "disabled")))
+
 (provide 'rdj-whitespace)
