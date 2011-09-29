@@ -31,6 +31,9 @@
 (require 'rdj-turds)
 (require 'rdj-whitespace)
 
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
 (require 'rdj-bindings)
 (require 'rdj-theme)
 (require 'rdj-state)
