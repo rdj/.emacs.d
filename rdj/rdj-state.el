@@ -4,6 +4,7 @@
 ;; If there's no desktop state to load, open a couple of files I
 ;; always have open and split the window.
 (require 'desktop)
+(setq desktop-path (list user-emacs-directory))
 (defun rdj-default-initial-state ()
   "Opens init.el and scratchfile in a split window"
   (interactive)
