@@ -94,7 +94,6 @@
   '(add-to-list 'ffip-patterns "*.php"))
 
 ;; ruby
-(add-hook 'ruby-mode-hook 'my-language-mode-hook)
 (add-hook 'ruby-mode-hook (lambda () (defun ruby-mode-set-encoding () nil)))
 (aput 'auto-mode-alist "\\.builder\\'" 'ruby-mode)
 (aput 'auto-mode-alist "\\.rake\\'" 'ruby-mode)
@@ -134,7 +133,6 @@
 ;; YAML
 (autoload 'yaml-mode "yaml-mode" nil t)
 (aput 'auto-mode-alist "\\.ya?ml$" 'yaml-mode)
-(add-hook 'yaml-mode-hook 'my-language-mode-hook)
 
 ;; XCode Configuration
 (aput 'auto-mode-alist "\\.xcconfig\\'" 'conf-mode)
