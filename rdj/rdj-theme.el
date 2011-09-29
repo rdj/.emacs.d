@@ -6,6 +6,7 @@
 (line-number-mode 1)
 (column-number-mode 1)
 (size-indication-mode 1)
+(global-hl-line-mode t) ;; trying this out for now
 
 ;; Window title
 (defun rdj-shorten-filename (filename)
