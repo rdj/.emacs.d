@@ -43,9 +43,10 @@
          (fboundp flag)
          (setq flag (funcall flag)))
     (and flag
-	 (save-excursion
-	   (delete-trailing-whitespace)
-	   ))))
+         (save-excursion
+           (untabify (point-min) (point-max))
+           (delete-trailing-whitespace)
+           ))))
 
 (add-hook 'before-save-hook 'rdj-whitespace-cleanup)
 
