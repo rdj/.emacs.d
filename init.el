@@ -13,12 +13,11 @@
 
 (require 'rdj-defs)
 (require 'rdj-package)
-(require 'rdj-mac)
 (require 'rdj-smartsize)
 (require 'rdj-turds)
 (require 'rdj-whitespace)
 
+(require 'rdj-bindings)
 (require 'rdj-theme)
-
 (require 'rdj-state)
 
