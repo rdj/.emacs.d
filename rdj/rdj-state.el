@@ -12,9 +12,9 @@
     ))
 (add-hook 'desktop-no-desktop-file-hook 'rdj-default-initial-state)
 (add-hook 'desktop-after-read-hook (function (lambda () (progn
-							  (split-window-horizontally)
-							  (previous-buffer)
-							  ))))
+                                                          (split-window-horizontally)
+                                                          (previous-buffer)
+                                                          ))))
 
 ;; I use window-system as a marker for this being the "main instance"
 ;; of emacs. I generally use `emacs -nw` from bash for short-lived
