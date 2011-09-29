@@ -1,3 +1,7 @@
+;; Font lock
+(global-font-lock-mode t)
+(setq font-lock-maximum-decoration t)
+
 ;; Highlight paren expressions
 (show-paren-mode 1)
 (setq show-paren-style 'paren)

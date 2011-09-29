@@ -41,17 +41,4 @@
 (setq next-line-add-newlines nil)
 
 
-;;; Modes
-
-;; Default to fundamental
-(setq default-major-mode 'fundamental-mode)
-
-;; Font lock
-(global-font-lock-mode 't)
-(setq font-lock-maximum-decoration 't)
-
-;; Abbrevations
-(setq default-abbrev-mode 't)
-
-
 (provide 'rdj-misc)
