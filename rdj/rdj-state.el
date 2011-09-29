@@ -1,6 +1,3 @@
-(setq inhibit-startup-message 't)
-(setq initial-scratch-message nil)
-
 ;; If there's no desktop state to load, open a couple of files I
 ;; always have open and split the window.
 (require 'desktop)
