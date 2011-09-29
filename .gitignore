@@ -4,5 +4,6 @@
 /backups
 /auto-save-list
 .ido.last
+.saveplace
 .emacs.desktop
 .emacs.desktop.lock
