@@ -1,8 +1,12 @@
 (defun rdj-ret-indents () (local-set-key (kbd "RET") 'newline-and-indent))
 (defun rdj-no-auto-fill () (auto-fill-mode 0))
 
-(add-hook 'prog-mode-hook 'rdj-ret-indents)
-(add-hook 'prog-mode-hook 'rdj-no-auto-fill)
+(defun rdj-setup-prog-mode-hook (hook)
+  "Adds my default programmingish actions to the hook"
+  (add-hook hook 'rdj-ret-indents)
+  (add-hook hook 'rdj-no-auto-fill))
+
+(rdj-setup-prog-mode-hook 'prog-mode-hook)
 
 ;; C/C++
 (c-add-style "ryan" '("bsd"
@@ -28,7 +32,14 @@
 
 ;; CSS
 (autoload 'css-mode "css-mode" "Mode for editing CSS files" t)
+(setq-default css-indent-offset 2)
 (aput 'auto-mode-alist "\\.css\\'" 'css-mode)
+(aput 'auto-mode-alist "\\.scss\\'" 'css-mode)
+(eval-after-load 'find-file-in-project
+  '(add-to-list 'ffip-patterns "*.scss"))
+;; css-mode doesn't seem to run prog-mode-hook automatically
+(rdj-setup-prog-mode-hook 'css-mode-hook)
+
 
 ;; Javascript
 (autoload 'js2-mode "js2-mode" "Mode for editing javascript files" t)
@@ -160,5 +171,8 @@
 (autoload 'haml-mode "haml-mode" "Major mode for editing HAML code." t)
 (aput 'auto-mode-alist "\\.haml\\'" 'haml-mode)
 (add-hook 'haml-mode-hook (function (lambda () (flyspell-prog-mode))))
+(eval-after-load 'find-file-in-project
+  '(add-to-list 'ffip-patterns "*.haml"))
+
 
 (provide 'rdj-prog)
