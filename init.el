@@ -12,6 +12,7 @@
 (load custom-file)
 
 (require 'rdj-defs)
+(require 'rdj-early-off)
 (require 'rdj-package)
 (require 'rdj-smartsize)
 (require 'rdj-turds)
