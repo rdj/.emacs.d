@@ -9,6 +9,8 @@
 (global-set-key (kbd "C-c C-w") 'rdj-toggle-whitespace-cleanup)
 (global-set-key (kbd "C-c C-z") 'rdj-smartsize-frame)
 
+(global-set-key (kbd "C-x f") 'find-file-in-project)
+
 (global-set-key (kbd "M-`") 'other-frame)
 (global-set-key (kbd "M-i") 'rdj-goto-symbol)
 (global-set-key (kbd "M-g") 'goto-line)
