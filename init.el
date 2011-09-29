@@ -17,6 +17,10 @@
 (setq rdj-elisp-path (concat user-emacs-directory "rdj/"))
 (push rdj-elisp-path load-path)
 
+;; Non-package.el stuff from ~/.emacs.d/vendor
+(setq rdj-vendor-elisp-path (concat user-emacs-directory "vendor/"))
+(push rdj-vendor-elisp-path load-path)
+
 ;; Customize is basically an anti-feature, but some things like theme
 ;; whitelists according to file hashes are just probably going to live
 ;; there.
