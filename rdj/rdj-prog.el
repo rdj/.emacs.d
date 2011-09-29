@@ -77,8 +77,8 @@
           (function (lambda () (abbrev-mode 0))))
 
 ;; PHP
-;; (autoload 'php-mode "php-mode" "Major mode for editing PHP code." t)
-;; (aput 'auto-mode-alist "\\.php\\'" 'php-mode)
+(autoload 'php-mode "php-mode" "Major mode for editing PHP code." t)
+(aput 'auto-mode-alist "\\.php\\'" 'php-mode)
 
 ;; ruby
 (add-hook 'ruby-mode-hook 'my-language-mode-hook)
