@@ -1,5 +1,6 @@
 (setq inhibit-startup-message 't)
 (setq initial-scratch-message nil)
+(setq disabled-command-function nil)
 
 (menu-bar-mode (if rdj-is-mac 1 -1))
 (blink-cursor-mode -1)
