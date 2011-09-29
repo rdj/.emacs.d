@@ -27,12 +27,10 @@
 (require 'rdj-early-off)
 (require 'rdj-package)
 (require 'rdj-ido)
+(require 'rdj-misc)
 (require 'rdj-smartsize)
 (require 'rdj-turds)
 (require 'rdj-whitespace)
-
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
 
 (require 'rdj-bindings)
 (require 'rdj-theme)
