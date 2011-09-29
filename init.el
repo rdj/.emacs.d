@@ -24,6 +24,8 @@
 (load custom-file)
 
 (require 'rdj-defs)
+(require 'rdj-utils)
+
 (require 'rdj-early-off)
 (require 'rdj-package)
 (require 'rdj-ido)
