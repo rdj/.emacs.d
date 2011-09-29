@@ -23,4 +23,10 @@
              (define-key isearch-mode-map "\C-c" 'isearch-toggle-case-fold)
              (define-key isearch-mode-map "\C-j" 'isearch-edit-string))))
 
+; cperl-mode rudely overrides my whitespace toggle
+(add-hook 'cperl-mode-hook
+          (function
+           (lambda ()
+             (local-set-key (kbd "C-c C-w") 'rdj-toggle-whitespace-cleanup))))
+
 (provide 'rdj-bindings)

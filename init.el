@@ -34,6 +34,8 @@
 (require 'rdj-turds)
 (require 'rdj-whitespace)
 
+(require 'rdj-prog)
+
 (require 'rdj-bindings)
 (require 'rdj-theme)
 (require 'rdj-state)
