@@ -9,8 +9,11 @@
 ;; If I turn on truncate-lines, I mean it
 (setq truncate-partial-width-windows nil)
 
-;; hippie expand weeeeee
-(eval-after-load "dabbrev" '(defalias 'dabbrev-expand 'hippie-expand))
+;; Hippie expand: at times perhaps too hip
+(dolist (f '(try-expand-line try-expand-list try-complete-file-name-partially))
+  (delete f hippie-expand-try-functions-list))
+;; Effectively move file name to end of the list
+(add-to-list 'hippie-expand-try-functions-list 'try-complete-file-name-partially t)
 
 ;; use ido
 (setq ido-enable-flex-matching 't

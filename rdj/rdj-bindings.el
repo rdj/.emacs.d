@@ -12,6 +12,7 @@
 (global-set-key (kbd "C-x f") 'find-file-in-project)
 
 (global-set-key (kbd "M-`") 'other-frame)
+(global-set-key (kbd "M-/") 'hippie-expand) ;; overwrite the binding for dabbrev-expand, seems safer than defalias
 (global-set-key (kbd "M-i") 'rdj-goto-symbol)
 (global-set-key (kbd "M-g") 'goto-line)
 
