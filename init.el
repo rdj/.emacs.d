@@ -23,7 +23,6 @@
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file)
 
-(require 'rdj-defs)
 (require 'rdj-utils)
 
 (require 'rdj-early-off)

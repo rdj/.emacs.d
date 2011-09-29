@@ -1,21 +1,23 @@
+(setq rdj-is-mac (equal 'ns window-system))
+
 (defun rdj-small-font ()
   (if rdj-is-mac
       "-*-menlo-*-r-*-*-12-*-*-*-*-*-*-*"
-      "-*-consolas-*-r-*-*-12-*-*-*-*-*-*-*"
+    "-*-consolas-*-r-*-*-12-*-*-*-*-*-*-*"
     )
-)
+  )
 (defun rdj-big-font   ()
   (if rdj-is-mac
       "-*-menlo-*-r-*-*-14-*-*-*-*-*-*-*"
-      "-*-consolas-*-r-*-*-14-*-*-*-*-*-*-*"
+    "-*-consolas-*-r-*-*-14-*-*-*-*-*-*-*"
+    )
   )
-)
 (defun rdj-huge-font   ()
   (if rdj-is-mac
       "-*-menlo-*-r-*-*-15-*-*-*-*-*-*-*"
-      "-*-consolas-*-r-*-*-15-*-*-*-*-*-*-*"
+    "-*-consolas-*-r-*-*-15-*-*-*-*-*-*-*"
+    )
   )
-)
 
 (defun rdj-change-font (fontspec) "Change the current and default frame font"
   (interactive)
