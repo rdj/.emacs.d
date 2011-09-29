@@ -1,3 +1,15 @@
+;; On Mac OS X, GUI programs do not get a sensible PATH variable (i.e.
+;; from /usr/libexec/path_helper). You can mitigate this by setting
+;; the PATH variable in the binary plist file at this path:
+;;
+;;   ~/.MacOSX/environment.plist
+;;
+;; Easiest way is using defaults:
+;;
+;;   defaults write $HOME/.MacOSX/environment PATH "$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+;;
+;; You will have to log out and back in for this to take effect.
+
 (require 'cl)
 (require 'assoc)
 
