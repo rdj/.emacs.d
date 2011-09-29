@@ -51,6 +51,4 @@
   (rdj-smartsize-frame-for (x-display-pixel-width) (x-display-pixel-height))
 )
 
-(global-set-key "\C-c\C-z" 'rdj-smartsize-frame)
-
 (provide 'rdj-smartsize)
