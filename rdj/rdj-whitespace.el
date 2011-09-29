@@ -39,9 +39,9 @@
 (defun rdj-whitespace-cleanup ()
   (let ((flag rdj-whitespace-should-cleanup-p))
     (and flag
-	 (symbolp flag)
-	 (fboundp flag)
-	 (setq flag (funcall flag)))
+         (symbolp flag)
+         (fboundp flag)
+         (setq flag (funcall flag)))
     (and flag
 	 (save-excursion
 	   (delete-trailing-whitespace)
