@@ -8,7 +8,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar rdj-packages '();'(starter-kit starter-kit-lisp starter-kit-bindings)
+(defvar rdj-packages '(magit)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p rdj-packages)
