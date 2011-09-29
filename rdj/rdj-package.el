@@ -8,7 +8,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar rdj-packages '(magit php-mode find-file-in-project)
+(defvar rdj-packages '(magit php-mode find-file-in-project ruby-end)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p rdj-packages)

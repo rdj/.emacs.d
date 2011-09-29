@@ -98,16 +98,7 @@
 (add-hook 'ruby-mode-hook (lambda () (defun ruby-mode-set-encoding () nil)))
 (aput 'auto-mode-alist "\\.builder\\'" 'ruby-mode)
 (aput 'auto-mode-alist "\\.rake\\'" 'ruby-mode)
-
-;; Use electric ruby, but only expend */end keywords, not delims
-(add-hook 'ruby-mode-hook (function (lambda () (when (require 'ruby-electric)
-  (setq ruby-electric-expand-delimiters-list '())
-  (ruby-electric-mode 1)
-))))
-
-;; Attempt to ri docs in emacs -- not very good
-(setq ri-ruby-script (expand-file-name "~/.emacs.d/ri-emacs.rb"))
-(autoload 'ri "ri-ruby" "Ruby documentation mode" t)
+(eval-after-load 'ruby-mode '(require 'ruby-end))
 
 ;; shortcuts for .html.erb
 (defun rdj-insert-eruby-encoded-section ()
