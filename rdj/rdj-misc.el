@@ -9,6 +9,9 @@
 ;; If I turn on truncate-lines, I mean it
 (setq truncate-partial-width-windows nil)
 
+;; hippie expand weeeeee
+(eval-after-load "dabbrev" '(defalias 'dabbrev-expand 'hippie-expand))
+
 ;; Use pathname to get unique buffer names instead of <2>
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
