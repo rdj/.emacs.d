@@ -51,6 +51,14 @@
       ;; colors with +x are lighter, colors with -x are darker
       (zenburn-fg "#dcdccc")
       (zenburn-fg-1 "#656555")
+      ;; (zenburn-bg-1 "#080808")
+      ;; (zenburn-bg "#181818")
+      ;; (zenburn-bg+1 "#2b2b2b")
+      ;; (zenburn-bg+2 "#3f3f3f")
+      ;; (zenburn-bg-1 "#181818")
+      ;; (zenburn-bg "#2b2b2b")
+      ;; (zenburn-bg+1 "#3f3f3f")
+      ;; (zenburn-bg+2 "#4f4f4f")
       (zenburn-bg-1 "#2b2b2b")
       (zenburn-bg "#3f3f3f")
       (zenburn-bg+1 "#4f4f4f")
@@ -80,7 +88,9 @@
       (zenburn-blue-4 "#4c7073")
       (zenburn-blue-5 "#366060")
       (zenburn-magenta "#dc8cc3"))
-  (custom-theme-set-faces 
+  (eval-after-load 'cc-fonts ;; c-annotation-face is improperly set in cc-fonts, overriding the normal theme
+    `(set-face-foreground 'c-annotation-face ,zenburn-green+1))
+  (custom-theme-set-faces
    'zenburn
    '(link ((t (:foreground "#f0dfaf" :underline t))))
    '(link-visited ((t (:foreground "#8b008b" :underline t))))
@@ -152,6 +162,9 @@
    `(font-lock-type-face ((,class (:foreground ,zenburn-blue))))
    `(font-lock-variable-name-face ((,class (:foreground ,zenburn-orange))))
    `(font-lock-warning-face ((,class (:foreground ,zenburn-yellow-1 :weight bold :underline t))))
+
+   ;;; non-generic c-mode faces
+   `(c-annotation-face ((,class (:foreground ,zenburn-green+1)))) ;; doesn't actually work -- see above
 
    ;;; external
 
@@ -435,7 +448,7 @@
 
 (custom-theme-set-variables
  'zenburn
- '(ansi-color-names-vector [zenburn-bg zenburn-red zenburn-green zenburn-yellow 
+ '(ansi-color-names-vector [zenburn-bg zenburn-red zenburn-green zenburn-yellow
                                        zenburn-blue zenburn-magenta zenburn-cyan zenburn-fg]))
 
 (provide-theme 'zenburn)
