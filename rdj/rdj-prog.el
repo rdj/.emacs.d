@@ -9,7 +9,7 @@
 (defun rdj-add-to-ffip (pattern)
   "Delay-adds a filename pattern to find-file-in-project"
   (eval-after-load 'find-file-in-project
-    (list 'add-to-list ''ffip-patterns pattern)))
+    `(add-to-list 'ffip-patterns ,pattern)))
 
 (rdj-setup-prog-mode-hook 'prog-mode-hook)
 
