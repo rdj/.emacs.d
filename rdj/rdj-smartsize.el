@@ -1,5 +1,3 @@
-(setq rdj-is-mac (equal 'ns window-system))
-
 (defun rdj-small-font ()
   (if rdj-is-mac
       "-*-menlo-*-r-*-*-12-*-*-*-*-*-*-*"

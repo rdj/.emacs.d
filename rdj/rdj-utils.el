@@ -1,3 +1,5 @@
+(setq rdj-is-mac (equal 'ns window-system))
+
 (defun rdj-swap-windows ()
  "If you have 2 windows, it swaps them." (interactive) (cond ((not (= (count-windows) 2)) (message "You need exactly 2 windows to do this."))
  (t
