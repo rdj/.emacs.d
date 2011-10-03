@@ -23,6 +23,12 @@
 ;    (objc-method-call-cont . +)
   )
 ))
+(rdj-add-to-ffip "*.h")
+(rdj-add-to-ffip "*.c")
+(rdj-add-to-ffip "*.cpp")
+(rdj-add-to-ffip "*.cxx")
+(rdj-add-to-ffip "*.m")
+(rdj-add-to-ffip "*.java")
 
 (setq-default
   c-echo-syntactic-information-p 't
