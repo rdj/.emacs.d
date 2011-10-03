@@ -33,4 +33,14 @@
            (lambda ()
              (local-set-key (kbd "C-c C-w") 'rdj-toggle-whitespace-cleanup))))
 
+;; cua-mode is generally terrible, but every once in a while it is
+;; handy to use because it lets you use normal region commands on
+;; rectangular regions, which are selected with C-RET.
+;;
+;; So with this binding, I can toggle CUA mode on briefly and then
+;; back off.
+;;
+(setq cua-enable-cua-keys nil)
+(global-set-key (kbd "C-c r") 'cua-mode)
+
 (provide 'rdj-bindings)
