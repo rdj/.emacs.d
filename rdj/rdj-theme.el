@@ -1,3 +1,11 @@
+;; The variable redisplay-dont-pause, when set to t, will cause Emacs
+;; to fully redraw the display before it processes queued input
+;; events. This may have slight performance implications if you’re
+;; aggressively mouse scrolling a document or rely on your keyboard’s
+;; auto repeat feature. For most of us, myself included, it’s probably
+;; a no-brainer to switch it on.
+(setq redisplay-dont-pause t)
+
 ;; Font lock
 (global-font-lock-mode t)
 (setq font-lock-maximum-decoration t)
