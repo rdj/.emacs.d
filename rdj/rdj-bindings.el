@@ -6,6 +6,7 @@
 (global-set-key (kbd "C-c C-g") 'magit-status)
 (global-set-key (kbd "C-c C-r") 'recompile)
 (global-set-key (kbd "C-c C-t") 'toggle-truncate-lines)
+(global-set-key (kbd "C-c C-v") 'revert-buffer)
 (global-set-key (kbd "C-c C-w") 'rdj-toggle-whitespace-cleanup)
 (global-set-key (kbd "C-c C-z") 'rdj-smartsize-frame)
 
