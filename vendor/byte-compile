@@ -1,0 +1,3 @@
+#!/bin/sh
+
+find . -name \*.el -and -not -name init.el -print0 | xargs -0 emacs -nw -batch -f batch-byte-compile

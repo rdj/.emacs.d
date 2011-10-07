@@ -88,8 +88,6 @@
       (zenburn-blue-4 "#4c7073")
       (zenburn-blue-5 "#366060")
       (zenburn-magenta "#dc8cc3"))
-  (eval-after-load 'cc-fonts ;; c-annotation-face is improperly set in cc-fonts, overriding the normal theme
-    `(set-face-foreground 'c-annotation-face ,zenburn-green+1))
   (custom-theme-set-faces
    'zenburn
    '(link ((t (:foreground "#f0dfaf" :underline t))))
@@ -162,9 +160,6 @@
    `(font-lock-type-face ((,class (:foreground ,zenburn-blue))))
    `(font-lock-variable-name-face ((,class (:foreground ,zenburn-orange))))
    `(font-lock-warning-face ((,class (:foreground ,zenburn-yellow-1 :weight bold :underline t))))
-
-   ;;; non-generic c-mode faces
-   `(c-annotation-face ((,class (:foreground ,zenburn-green+1)))) ;; doesn't actually work -- see above
 
    ;;; external
 
