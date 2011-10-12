@@ -121,6 +121,10 @@
    `(compilation-message-face ((,class (:foreground ,zenburn-blue))))
    `(compilation-warning-face ((,class (:foreground ,zenburn-yellow-1 :weight bold :underline t))))
 
+   ;;; cperl
+   `(cperl-array-face ((,class (:background ,zenburn-bg :foreground ,zenburn-orange :slant normal))))
+   `(cperl-hash-face ((,class (:background ,zenburn-bg :foreground ,zenburn-orange :slant normal))))
+
    ;;; grep
    `(grep-context-face ((,class (:foreground ,zenburn-fg))))
    `(grep-error-face ((,class (:foreground ,zenburn-red-1 :weight bold :underline t))))
