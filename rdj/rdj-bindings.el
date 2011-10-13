@@ -19,6 +19,16 @@
 
 (global-set-key (kbd "C-M-|") 'align-regexp)
 
+;; Tab should indent region if selected or this line if not
+(defun rdj-maybe-tab ()
+  (interactive)
+  (if (and transient-mark-mode mark-active)
+      (indent-region (region-beginning) (region-end) nil)
+    (c-indent-command)))
+
+(defun tab-indents-region () (local-set-key (kbd "TAB") 'rdj-maybe-tab))
+(add-hook 'c-mode-common-hook 'tab-indents-region)
+
 (add-hook 'isearch-mode-hook
           (function
            (lambda ()
