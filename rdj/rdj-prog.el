@@ -36,6 +36,7 @@
   c-auto-newline nil
   c-hungry-delete-key nil
 )
+(rdj-setup-prog-mode-hook 'c-mode-common-hook) ;; vendored cc-mode isn't a prog-mode derived mode
 
 ;; C#
 (autoload 'csharp-mode "csharp-mode-0.8.5" "Major mode for editing C# code." t)
