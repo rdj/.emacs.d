@@ -9,3 +9,4 @@
 .emacs.desktop.lock
 *.elc
 tramp
+%backup%~
