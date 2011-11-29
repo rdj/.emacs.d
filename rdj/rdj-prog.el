@@ -96,7 +96,6 @@
 (aput 'auto-mode-alist "\\.builder\\'" 'ruby-mode)
 (aput 'auto-mode-alist "\\.rake\\'" 'ruby-mode)
 (rdj-add-to-ffip "*.rake")
-(eval-after-load 'ruby-mode '(require 'ruby-end))
 
 ;; Text
 (add-hook 'text-mode-hook (function (lambda () (flyspell-mode 1))))
