@@ -93,6 +93,7 @@
 
 ;; ruby
 (add-hook 'ruby-mode-hook (lambda () (defun ruby-mode-set-encoding () nil)))
+(add-hook 'ruby-mode-hook (lambda () (ruby-end-mode 1)))
 (aput 'auto-mode-alist "\\.builder\\'" 'ruby-mode)
 (aput 'auto-mode-alist "\\.rake\\'" 'ruby-mode)
 (rdj-add-to-ffip "*.rake")
