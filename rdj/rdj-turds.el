@@ -18,4 +18,13 @@
 (defvar rdj-backup-dir (concat user-emacs-directory "backups/"))
 (setq backup-directory-alist (list (cons "." rdj-backup-dir)))
 
+;; Disable backup files for su/sudo edited files. They are a security risk.
+(setq backup-enable-predicate
+      (lambda (name)
+        (and (normal-backup-enable-predicate name)
+             (not
+              (let ((method (file-remote-p name 'method)))
+                (when (stringp method)
+                  (member method '("su" "sudo"))))))))
+
 (provide 'rdj-turds)
