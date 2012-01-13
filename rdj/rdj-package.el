@@ -15,7 +15,6 @@
     find-file-in-project
     magit
     php-mode
-    ruby-end
     yaml-mode
     )
   "A list of packages to ensure are installed at launch.")
