@@ -97,6 +97,17 @@
 (aput 'auto-mode-alist "\\.rake\\'" 'ruby-mode)
 (rdj-add-to-ffip "*.rake")
 
+;; ruby-insert-end was removed from ruby-mode.el, see https://groups.google.com/group/emacs-on-rails/msg/565fba8263233c28
+(defun ruby-insert-end ()
+  "Insert \"end\" at point and reindent current line."
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
+(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode)))
+(autoload 'ruby-electric-mode "ruby-electric" nil t)
+(setq ruby-electric-expand-delimiters-list '())
+
 ;; Text
 (add-hook 'text-mode-hook (function (lambda () (flyspell-mode 1))))
 
