@@ -13,6 +13,7 @@
   html-mode
   java-mode
   javascript-mode
+  js-mode
   js2-mode
   latex-mode
   lisp-mode
