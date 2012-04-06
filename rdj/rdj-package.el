@@ -13,6 +13,7 @@
 (defvar rdj-packages
   '(
     find-file-in-project
+    coffee-mode
     magit
     php-mode
     yaml-mode
