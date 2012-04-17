@@ -3,6 +3,7 @@
 /autosaves
 /backups
 /auto-save-list
+/url
 .ido.last
 .saveplace
 .emacs.desktop
