@@ -18,6 +18,13 @@
                                                           (other-window 1)
                                                           ))))
 
+;; clean-buffer-list is a great function that can save you from the
+;; insanity of a months-old desktop session with thousands of buffers.
+(require 'midnight)
+(setq clean-buffer-list-delay-general 7) ;; days
+(add-to-list 'clean-buffer-list-kill-never-buffer-names "scratchfile")
+(add-to-list 'clean-buffer-list-kill-regexps "^\\*magit.*$")
+
 ;; I use window-system as a marker for this being the "main instance"
 ;; of emacs. I generally use `emacs -nw` from bash for short-lived
 ;; editing like `sudo emacs -nw /etc/hosts`
