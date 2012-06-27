@@ -9,6 +9,9 @@
 ;;   defaults write $HOME/.MacOSX/environment PATH "$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
 ;;
 ;; You will have to log out and back in for this to take effect.
+;;
+;; NOTE: At some point a Lion update broke this behavior. I now
+;; manually load this file in rdj-fix-path.
 
 (require 'cl)
 (require 'assoc)
@@ -32,6 +35,7 @@
 (load custom-file)
 
 (require 'rdj-utils)
+(require 'rdj-fix-path)
 
 (require 'rdj-early-off)
 (require 'rdj-package)
