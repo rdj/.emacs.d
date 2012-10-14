@@ -23,6 +23,7 @@
   nxhtml-mode
   nxml-mode
   objc-mode
+  org-mode
   perl-mode
   ruby-mode
   shell-script-mode
