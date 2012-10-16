@@ -110,6 +110,7 @@
 
 ;; Text
 (add-hook 'text-mode-hook (function (lambda () (flyspell-mode 1))))
+(add-hook 'org-mode-hook (function (lambda () (flyspell-mode -1))))
 
 ;; YAML
 (autoload 'yaml-mode "yaml-mode" nil t)

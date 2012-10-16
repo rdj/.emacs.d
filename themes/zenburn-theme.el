@@ -356,7 +356,7 @@
    `(org-done ((,class (:bold t :weight bold :foreground ,zenburn-green+3))))
    `(org-formula ((,class (:foreground ,zenburn-yellow-2))))
    `(org-headline-done ((,class (:foreground ,zenburn-green+3))))
-   `(org-hide ((,class (:foreground ,zenburn-bg-1))))
+   `(org-hide ((,class (:foreground ,zenburn-bg))))
    `(org-level-1 ((,class (:foreground ,zenburn-orange))))
    `(org-level-2 ((,class (:foreground ,zenburn-green+1))))
    `(org-level-3 ((,class (:foreground ,zenburn-blue-1))))
