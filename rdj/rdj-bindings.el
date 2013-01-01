@@ -43,6 +43,12 @@
            (lambda ()
              (local-set-key (kbd "C-c C-w") 'rdj-toggle-whitespace-cleanup))))
 
+; org-mode rudely overrides my resize key
+(add-hook 'org-mode-hook
+          (function
+           (lambda ()
+             (local-set-key (kbd "C-c C-z") 'rdj-smartsize-frame))))
+
 ;; cua-mode is generally terrible, but every once in a while it is
 ;; handy to use because it lets you use normal region commands on
 ;; rectangular regions, which are selected with C-RET.
