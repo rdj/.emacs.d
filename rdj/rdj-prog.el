@@ -11,6 +11,8 @@
   (eval-after-load 'find-file-in-project
     `(add-to-list 'ffip-patterns ,pattern)))
 
+(setq ffip-limit 1024)
+
 (rdj-setup-prog-mode-hook 'prog-mode-hook)
 
 ;; C/C++
