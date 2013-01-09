@@ -33,6 +33,7 @@
   (apply 'rdj-setup-frame (cond    ; +X  +Y   WxH  FONT
     ((= display-width 1680)   (list   1   0 184 52 (rdj-huge-font)))
     ((= display-width 1920)   (list 175  50 225 72 (rdj-small-font)))
+    ((= display-width 2560)   (list 240  50 260 76 (rdj-big-font)))
     ((< display-width 1920)   (list   0   0 180 50 (rdj-small-font)))
     ((< display-height 1600)  (list 261  50 260 76 (rdj-big-font)))
     ((>= display-height 1920) (list 261 125 260 80 (rdj-big-font)))
