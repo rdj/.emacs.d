@@ -98,6 +98,7 @@
 (aput 'auto-mode-alist "\\.builder\\'" 'ruby-mode)
 (aput 'auto-mode-alist "\\.rake\\'" 'ruby-mode)
 (rdj-add-to-ffip "*.rake")
+(rdj-add-to-ffip "*.erb")
 
 ;; ruby-insert-end was removed from ruby-mode.el, see https://groups.google.com/group/emacs-on-rails/msg/565fba8263233c28
 (defun ruby-insert-end ()
