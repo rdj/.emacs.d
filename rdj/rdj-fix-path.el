@@ -7,7 +7,13 @@
 (when rdj-is-mac
   (let ((plist (expand-file-name "~/.MacOSX/environment.plist")))
     (when (file-readable-p plist)
-      (let ((dict (cdr (assq 'dict (cdar (xml-parse-file plist))))))
+      (let* ((xml (shell-command-to-string
+                   (format "/usr/bin/plutil -convert xml1 -o - %s"
+                           (shell-quote-argument plist))))
+             (root (with-temp-buffer (insert xml)
+                                     (xml-parse-region (point-min) (point-max))))
+             (dict (cdr (assq 'dict (cdar root)))))
+
         (while dict
           (if (and (listp (car dict))
                    (eq 'key (caar dict)))
@@ -21,4 +27,3 @@
             (nreverse (split-string (getenv "PATH") ":"))))))
 
 (provide 'rdj-fix-path)
-
