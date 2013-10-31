@@ -17,6 +17,7 @@
     find-file-in-project
     coffee-mode
     magit
+    ruby-electric
     php-mode
     yaml-mode
     )

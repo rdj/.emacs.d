@@ -95,6 +95,7 @@
 
 ;; ruby
 (add-hook 'ruby-mode-hook (lambda () (defun ruby-mode-set-encoding () nil)))
+(rdj-setup-prog-mode-hook 'ruby-mode-hook)
 (aput 'auto-mode-alist "\\.builder\\'" 'ruby-mode)
 (aput 'auto-mode-alist "\\.rake\\'" 'ruby-mode)
 (rdj-add-to-ffip "*.rake")
@@ -148,5 +149,9 @@
 (rdj-setup-prog-mode-hook 'haml-mode-hook)
 (add-hook 'haml-mode-hook (function (lambda () (flyspell-prog-mode))))
 (rdj-add-to-ffip "*.haml")
+
+;; CoffeeScript
+(setq-default coffee-tab-width 2)
+(rdj-add-to-ffip "*.coffee")
 
 (provide 'rdj-prog)
