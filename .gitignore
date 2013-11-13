@@ -4,6 +4,7 @@
 /backups
 /auto-save-list
 /url
+/var
 .ido.last
 .saveplace
 .emacs.desktop

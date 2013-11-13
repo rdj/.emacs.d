@@ -6,6 +6,9 @@
 ;; a no-brainer to switch it on.
 (setq redisplay-dont-pause t)
 
+(require 'unicode-fonts)
+(unicode-fonts-setup)
+
 ;; Font lock
 (global-font-lock-mode t)
 (setq font-lock-maximum-decoration t)

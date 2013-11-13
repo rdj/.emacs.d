@@ -19,6 +19,7 @@
     magit
     ruby-electric
     php-mode
+    unicode-fonts
     yaml-mode
     )
   "A list of packages to ensure are installed at launch.")
