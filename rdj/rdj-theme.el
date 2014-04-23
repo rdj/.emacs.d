@@ -15,7 +15,7 @@
 
 ;; Highlight paren expressions
 (show-paren-mode 1)
-(setq show-paren-style 'paren)
+(setq show-paren-style 'parenthesis)
 
 ;; Show file position
 (line-number-mode 1)
