@@ -20,6 +20,9 @@
       ido-save-directory-list-file (concat user-emacs-directory ".ido.last"))
 (ido-mode 1)
 
+;; automatically reload files changed in background
+(global-auto-revert-mode 1)
+
 ;; Use pathname to get unique buffer names instead of <2>
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
