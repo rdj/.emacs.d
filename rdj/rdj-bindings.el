@@ -59,4 +59,32 @@
 (setq cua-enable-cua-keys nil)
 (global-set-key (kbd "C-c r") 'cua-mode)
 
+;; Inspired by prelude-move-beginning-of-line but with opposite
+;; behavior.
+(defun rdj-move-beginning-of-line (arg)
+  "Move point back to beginning of line.
+
+Move point to the beginning of the line. If point is already
+there, move to the first non-whitespace character on this line.
+Effectively toggle between first non-whitespace charcter and the
+beginning of the line, choosing beginning of line first.
+
+If ARG is not nil or 1, move forward ARG - 1 lines first.  If
+point reaches the beginning or end of the buffer, stop there."
+  (interactive "^p")
+  (setq arg (or arg 1))
+
+  ;; Move lines first
+  (when (/= arg 1)
+    (let ((line-move-visual nil))
+      (forward-line (1- arg))))
+
+  (let ((orig-point (point)))
+    (move-beginning-of-line 1)
+    (when (= orig-point (point))
+      (back-to-indentation))))
+
+(global-set-key [remap move-beginning-of-line]
+                'rdj-move-beginning-of-line)
+
 (provide 'rdj-bindings)
