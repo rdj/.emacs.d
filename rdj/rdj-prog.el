@@ -1,10 +1,13 @@
 (defun rdj-ret-indents () (local-set-key (kbd "RET") 'newline-and-indent))
 (defun rdj-no-auto-fill () (auto-fill-mode 0))
+(defun rdj-sub-words () (subword-mode 1))
 
 (defun rdj-setup-prog-mode-hook (hook) ;; Some programming modes don't run prog-mode-hook
   "Adds my default programmingish actions to the hook"
   (add-hook hook 'rdj-ret-indents)
-  (add-hook hook 'rdj-no-auto-fill))
+  (add-hook hook 'rdj-no-auto-fill)
+  (add-hook hook 'rdj-sub-words)
+  )
 
 (defun rdj-add-to-ffip (pattern)
   "Delay-adds a filename pattern to find-file-in-project"
