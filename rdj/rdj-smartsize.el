@@ -1,21 +1,6 @@
-(defun rdj-small-font ()
-  (if rdj-is-mac
-      "-*-menlo-*-r-*-*-12-*-*-*-*-*-*-*"
-    "-*-consolas-*-r-*-*-12-*-*-*-*-*-*-*"
-    )
-  )
-(defun rdj-big-font   ()
-  (if rdj-is-mac
-      "-*-menlo-*-r-*-*-14-*-*-*-*-*-*-*"
-    "-*-consolas-*-r-*-*-14-*-*-*-*-*-*-*"
-    )
-  )
-(defun rdj-huge-font   ()
-  (if rdj-is-mac
-      "-*-menlo-*-r-*-*-15-*-*-*-*-*-*-*"
-    "-*-consolas-*-r-*-*-15-*-*-*-*-*-*-*"
-    )
-  )
+(defun rdj-small-font () "-*-inconsolata-*-r-*-*-14-*-*-*-*-*-*-*")
+(defun rdj-big-font () "-*-inconsolata-*-r-*-*-16-*-*-*-*-*-*-*")
+(defun rdj-huge-font () "-*-inconsolata-*-r-*-*-18-*-*-*-*-*-*-*")
 
 (defun rdj-change-font (fontspec) "Change the current and default frame font"
   (interactive)
@@ -33,7 +18,7 @@
   (apply 'rdj-setup-frame (cond    ; +X  +Y   WxH  FONT
     ((= display-width 1680)   (list   1   0 184 52 (rdj-huge-font)))
     ((= display-width 1920)   (list 175  50 225 72 (rdj-small-font)))
-    ((= display-width 2560)   (list 240  50 260 76 (rdj-big-font)))
+    ((= display-width 2560)   (list 240  50 260 72 (rdj-big-font)))
     ((< display-width 1920)   (list   0   0 180 50 (rdj-small-font)))
     ((< display-height 1600)  (list 261  50 260 76 (rdj-big-font)))
     ((>= display-height 1920) (list 261 125 260 80 (rdj-big-font)))
