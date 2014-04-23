@@ -5,6 +5,7 @@
 (defvar rdj-whitespace-cleanup-major-modes '(
   c++-mode
   c-mode
+  coffee-mode
   cperl-mode
   csharp-mode
   css-mode
