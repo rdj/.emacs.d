@@ -12,3 +12,5 @@
 *.elc
 tramp
 %backup%~
+projectile-bookmarks.eld
+/elpa.backup
