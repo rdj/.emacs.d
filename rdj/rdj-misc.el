@@ -1,5 +1,8 @@
 ;;; Behavior
 
+;; By default GC hard kicks in every 0.76 MB allocated
+(setq gc-cons-threshold 20000000)
+
 ;; Don't require full "yes" or "no" answers.
 (fset 'yes-or-no-p 'y-or-n-p)
 
