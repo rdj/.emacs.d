@@ -10,7 +10,7 @@
 (global-set-key (kbd "C-c C-w") 'rdj-toggle-whitespace-cleanup)
 (global-set-key (kbd "C-c C-z") 'rdj-smartsize-frame)
 
-(global-set-key (kbd "C-x f") 'find-file-in-project)
+(global-set-key (kbd "C-x f") 'helm-projectile)
 
 (global-set-key (kbd "M-`") 'other-frame)
 (global-set-key (kbd "M-/") 'hippie-expand) ;; overwrite the binding for dabbrev-expand, seems safer than defalias

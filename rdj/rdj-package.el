@@ -14,11 +14,13 @@
 ;; Add in your own as you wish:
 (defvar rdj-packages
   '(
-    find-file-in-project
     coffee-mode
+    helm
+    helm-projectile
     magit
-    ruby-electric
     php-mode
+    projectile
+    ruby-electric
     unicode-fonts
     yaml-mode
     )

@@ -157,4 +157,6 @@
 (setq-default coffee-tab-width 2)
 (rdj-add-to-ffip "*.coffee")
 
+(projectile-global-mode)
+
 (provide 'rdj-prog)
