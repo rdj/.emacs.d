@@ -22,6 +22,7 @@
     php-mode
     projectile
     ruby-electric
+    smex
     unicode-fonts
     yaml-mode
     )

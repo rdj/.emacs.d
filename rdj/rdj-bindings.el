@@ -18,6 +18,15 @@
 
 (global-set-key (kbd "C-M-|") 'align-regexp)
 
+;; smex is a replacement for M-x that uses ido
+(global-set-key (kbd "M-x") 'smex)
+
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(global-set-key (kbd "M-≈") 'helm-M-x)
+
 ;; Tab should indent region if selected or this line if not
 (defun rdj-maybe-tab ()
   (interactive)
