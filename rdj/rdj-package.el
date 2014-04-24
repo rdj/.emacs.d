@@ -15,6 +15,7 @@
 (defvar rdj-packages
   '(
     coffee-mode
+    flx-ido
     helm
     helm-projectile
     magit

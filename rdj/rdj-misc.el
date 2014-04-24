@@ -19,9 +19,13 @@
 (add-to-list 'hippie-expand-try-functions-list 'try-complete-file-name-partially t)
 
 ;; use ido
-(setq ido-enable-flex-matching 't
-      ido-save-directory-list-file (concat user-emacs-directory ".ido.last"))
+(setq ido-save-directory-list-file (concat user-emacs-directory ".ido.last")
+      ido-use-faces nil ;; disable ido faces to see flx highlights
+      )
 (ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1) ;; replacement for ido-enable-flex-matching
+(setq ido-use-faces nil)
 
 ;; automatically reload files changed in background
 (global-auto-revert-mode 1)
