@@ -11,13 +11,13 @@
 
 ;; Replace audible bell with a subtle visual bell (default visible
 ;; bell is awful)
-(defun rdj-terminal-visible-bell ()
+(defun rdj-modeline-visible-bell ()
  "Briefly inverts the modeline face (for use as ring-bell-function)"
  (invert-face 'mode-line)
  (run-with-timer 0.1 nil 'invert-face 'mode-line))
 
 (setq visible-bell nil
-      ring-bell-function 'my-terminal-visible-bell)
+      ring-bell-function 'rdj-modeline-visible-bell)
 
 ;; Font lock
 (global-font-lock-mode t)
