@@ -33,7 +33,7 @@
   )
 (defun rdj-big-font   ()
   (if rdj-is-mac
-      "-*-menlo-*-r-*-*-14-*-*-*-*-*-*-*"
+      "-*-Input Mono Narrow-ultralight-normal-extracondensed-*-14-*-*-*-*-*-*-*"
     "-*-consolas-*-r-*-*-14-*-*-*-*-*-*-*"
     )
   )
