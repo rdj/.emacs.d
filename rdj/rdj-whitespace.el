@@ -30,6 +30,7 @@
 ;; hotkey to avoid fucking up other people's stuff.
 
 (defvar rdj-whitespace-cleanup-major-modes '(
+  apache-mode
   c++-mode
   c-mode
   coffee-mode
