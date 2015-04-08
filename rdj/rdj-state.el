@@ -39,11 +39,6 @@
     (other-window 1)
     ))
 (add-hook 'desktop-no-desktop-file-hook 'rdj-default-initial-state)
-(add-hook 'desktop-after-read-hook (function (lambda () (progn
-                                                          (split-window-horizontally)
-                                                          (previous-buffer)
-                                                          (other-window 1)
-                                                          ))))
 
 ;; clean-buffer-list is a great function that can save you from the
 ;; insanity of a months-old desktop session with thousands of buffers.
