@@ -71,8 +71,6 @@
 (rdj-setup-prog-mode-hook 'c-mode-common-hook) ;; vendored cc-mode isn't a prog-mode derived mode
 
 ;; C#
-(autoload 'csharp-mode "csharp-mode-0.8.5" "Major mode for editing C# code." t)
-(aput 'auto-mode-alist "\\.cs\\'" 'csharp-mode)
 (rdj-add-to-ffip "*.cs")
 
 ;; CSS
@@ -119,39 +117,17 @@
           (function (lambda () (abbrev-mode 0))))
 
 ;; PHP
-;(autoload 'php-mode "php-mode" "Major mode for editing PHP code." t)
-(aput 'auto-mode-alist "\\.php\\'" 'php-mode)
 (rdj-add-to-ffip "*.php")
 
 ;; ruby
 (add-hook 'ruby-mode-hook (lambda () (defun ruby-mode-set-encoding () nil)))
 (rdj-setup-prog-mode-hook 'ruby-mode-hook)
-(add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.ru\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Guardfile\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Capfile\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.thor\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Thorfile\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Vagrantfile\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.jbuilder\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Podfile\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.podspec\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Puppetfile\\'" . ruby-mode))
 (rdj-add-to-ffip "*.rake")
 (rdj-add-to-ffip "*.erb")
 
 ;; ruby-insert-end was removed from ruby-mode.el, see https://groups.google.com/group/emacs-on-rails/msg/565fba8263233c28
-(defun ruby-insert-end ()
-  "Insert \"end\" at point and reindent current line."
-  (interactive)
-  (insert "end")
-  (ruby-indent-line t)
-  (end-of-line))
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode)))
-(autoload 'ruby-electric-mode "ruby-electric" nil t)
 (setq ruby-electric-expand-delimiters-list '())
 
 ;; Text
@@ -159,8 +135,6 @@
 (add-hook 'org-mode-hook (function (lambda () (flyspell-mode -1))))
 
 ;; YAML
-(autoload 'yaml-mode "yaml-mode" nil t)
-(aput 'auto-mode-alist "\\.ya?ml$" 'yaml-mode)
 (rdj-add-to-ffip "*.yaml")
 (rdj-add-to-ffip "*.yml")
 
@@ -184,10 +158,6 @@
 (rdj-add-to-ffip "*.xaml")
 
 ;; HAML
-;; This is vendored instead of from ELPA because I needed to apply a patch for emacs 24
-;; https://github.com/thorstadt/haml-mode/commit/cf5beeda8d6ea7e021d5994eee7c4be45b695964
-(autoload 'haml-mode "haml-mode" nil t)
-(aput 'auto-mode-alist "\\.haml" 'haml-mode)
 (rdj-setup-prog-mode-hook 'haml-mode-hook)
 (add-hook 'haml-mode-hook (function (lambda () (flyspell-prog-mode))))
 (rdj-add-to-ffip "*.haml")

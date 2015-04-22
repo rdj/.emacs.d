@@ -42,7 +42,9 @@
 (defvar rdj-packages
   '(
     coffee-mode
+    csharp-mode
     flx-ido
+    haml-mode
     helm
     helm-projectile
     magit
@@ -52,6 +54,7 @@
     smex
     unicode-fonts
     yaml-mode
+    zenburn-theme
     )
   "A list of packages to ensure are installed at launch.")
 

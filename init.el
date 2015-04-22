@@ -52,10 +52,6 @@
 (setq rdj-vendor-elisp-path (concat user-emacs-directory "vendor/"))
 (push rdj-vendor-elisp-path load-path)
 
-;; Temporarily vendoring in the whole cc-mode package to fix the
-;; c-annotation-face bug
-(push (concat rdj-vendor-elisp-path "cc-mode/") load-path)
-
 ;; Customize is basically an anti-feature, but some things like theme
 ;; whitelists according to file hashes are just probably going to live
 ;; there.
