@@ -28,6 +28,7 @@
 (setq inhibit-startup-message 't)
 (setq initial-scratch-message nil)
 (setq disabled-command-function nil)
+(setq magit-last-seen-setup-instructions "1.4.0") ; suppress magit upgrade message
 
 (unless rdj-is-mac (menu-bar-mode -1))
 (blink-cursor-mode -1)
