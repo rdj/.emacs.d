@@ -25,6 +25,8 @@
 ;;   Boston, MA 02110-1301
 ;;   USA
 
+;; Input font available here: http://input.fontbureau.com/download/
+
 (defun rdj-small-font ()
   (if rdj-is-mac
       "-*-menlo-*-r-*-*-12-*-*-*-*-*-*-*"
