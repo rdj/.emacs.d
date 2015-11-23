@@ -132,5 +132,6 @@
 (setq-default coffee-tab-width 2)
 
 (projectile-global-mode)
+(setq projectile-use-git-grep 't)
 
 (provide 'rdj-prog)
