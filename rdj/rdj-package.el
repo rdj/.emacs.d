@@ -43,6 +43,7 @@
   '(
     coffee-mode
     csharp-mode
+    exec-path-from-shell
     flx-ido
     haml-mode
     helm
