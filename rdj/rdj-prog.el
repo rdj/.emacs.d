@@ -102,6 +102,7 @@
 (add-hook 'ruby-mode-hook (lambda () (defun ruby-mode-set-encoding () nil)))
 (rdj-setup-prog-mode-hook 'ruby-mode-hook)
 (add-to-list 'auto-mode-alist '("Puppetfile\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.arb\\'" . ruby-mode))
 
 ;; ruby-insert-end was removed from ruby-mode.el, see https://groups.google.com/group/emacs-on-rails/msg/565fba8263233c28
 (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode)))
