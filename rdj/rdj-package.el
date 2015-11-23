@@ -52,6 +52,7 @@
     projectile
     ruby-electric
     smex
+    swift-mode
     unicode-fonts
     yaml-mode
     zenburn-theme
