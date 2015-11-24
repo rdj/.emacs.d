@@ -45,6 +45,7 @@
     csharp-mode
     exec-path-from-shell
     flx-ido
+    groovy-mode
     haml-mode
     helm
     helm-projectile
