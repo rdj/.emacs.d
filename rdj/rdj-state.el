@@ -50,6 +50,7 @@
 ;; I use window-system as a marker for this being the "main instance"
 ;; of emacs. I generally use `emacs -nw` from bash for short-lived
 ;; editing like `sudo emacs -nw /etc/hosts`
+(setq server-use-tcp 't) ;; Workaround recent emacs server bug on mac
 (when window-system
   (server-start)
   (setq server-window (selected-frame))
