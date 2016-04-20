@@ -38,6 +38,7 @@
   csharp-mode
   css-mode
   emacs-lisp-mode
+  groovy-mode
   haml-mode
   html-mode
   java-mode
