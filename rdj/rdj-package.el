@@ -41,6 +41,7 @@
 ;; Add in your own as you wish:
 (defvar rdj-packages
   '(
+    ag
     coffee-mode
     csharp-mode
     exec-path-from-shell
@@ -48,6 +49,7 @@
     groovy-mode
     haml-mode
     helm
+    helm-ag
     helm-projectile
     magit
     php-mode
