@@ -57,6 +57,7 @@
   perl-mode
   ruby-mode
   shell-script-mode
+  swift-mode
   yaml-mode
   )
   "Major modes for which to do whitespace cleanup")
