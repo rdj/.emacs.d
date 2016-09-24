@@ -40,6 +40,8 @@
 ;; A useful hack.
 
 (when (memq window-system '(mac ns))
+  (exec-path-from-shell-copy-env "SSH_AGENT_PID")
+  (exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
   (exec-path-from-shell-initialize))
 
 (provide 'rdj-fix-path)
