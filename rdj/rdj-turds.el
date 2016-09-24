@@ -54,4 +54,7 @@
                 (when (stringp method)
                   (member method '("su" "sudo"))))))))
 
+;; Disable lockfiles, which can play havoc with source control
+(setq create-lockfiles nil)
+
 (provide 'rdj-turds)
