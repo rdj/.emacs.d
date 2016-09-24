@@ -25,6 +25,12 @@
 ;;   Boston, MA 02110-1301
 ;;   USA
 
+
+;; Added by Package.el Dont't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; (I call package-initailize in rdj-package /rdj)
+;(package-initialize)
+
 (require 'cl)
 (require 'assoc)
 
