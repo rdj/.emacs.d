@@ -26,6 +26,22 @@
 ;;   USA
 
 ;; Input font available here: http://input.fontbureau.com/download/
+;;
+;; Emacs will give an autocomplete list of fontspec strings in response to
+;;   M-x set-default-font TAB
+;;
+;; You can use a function like this to get emacs to render a string in
+;; all the fonts it knows:
+;;
+;;   (let ((str "The quick brown fox jumps over the lazy dog ´`''\"\"1lI|¦!Ø0Oo{[()]}.,:; ")
+;;         (font-families (cl-remove-duplicates
+;;                (sort (font-family-list)
+;;                  (lambda(x y) (string< (upcase x) (upcase y))))
+;;                :test 'string=)))
+;;     (dolist (ff font-families)
+;;       (insert
+;;        (propertize str 'font-lock-face `(:family ,ff))               ff "\n")
+;;       ))
 
 (defun rdj-small-font ()
   (if rdj-is-mac
