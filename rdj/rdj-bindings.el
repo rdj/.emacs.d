@@ -122,4 +122,12 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key [remap move-beginning-of-line]
                 'rdj-move-beginning-of-line)
 
+(defun rdj-projectile-ag (&optional arg)
+  "Reverse behavior of projectile-ag, using PCRE by default."
+  (interactive "P")
+  (let ((current-prefix-arg (if arg nil 1)))
+    (call-interactively 'projectile-ag)))
+
+(global-set-key [remap projectile-ag] 'rdj-projectile-ag)
+
 (provide 'rdj-bindings)
