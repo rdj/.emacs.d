@@ -40,6 +40,13 @@
     ))
 (add-hook 'desktop-no-desktop-file-hook 'rdj-default-initial-state)
 
+(defun rdj-pid-alive-p (pid)
+  "Non-nil if the pid identifies a running system process"
+  (member pid (list-system-processes)))
+
+(when (not (rdj-pid-alive-p (desktop-owner)))
+  (setq desktop-load-locked-desktop t))
+
 ;; clean-buffer-list is a great function that can save you from the
 ;; insanity of a months-old desktop session with thousands of buffers.
 (require 'midnight)
