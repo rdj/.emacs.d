@@ -77,5 +77,10 @@
 ;; Scrolling past the end of the file should not make new lines
 (setq next-line-add-newlines nil)
 
+;; Use GNU ls if it's installed for better dired support
+(if rdj-is-mac
+    (let ((gls (executable-find "gls")))
+      (if gls
+          (setq directory-insert-program gls))))
 
 (provide 'rdj-misc)
