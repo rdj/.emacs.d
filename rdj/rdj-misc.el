@@ -81,6 +81,6 @@
 (if rdj-is-mac
     (let ((gls (executable-find "gls")))
       (if gls
-          (setq directory-insert-program gls))))
+          (setq insert-directory-program gls))))
 
 (provide 'rdj-misc)
