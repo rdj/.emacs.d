@@ -25,6 +25,9 @@
 ;;   Boston, MA 02110-1301
 ;;   USA
 
+;; Iosevka https://github.com/be5invis/Iosevka
+;; v-g-singlestorey v-asterisk-low v-paragraph-low v-m-shortleg v-at-long v-numbersign-slanted
+;;
 ;; Input font available here: http://input.fontbureau.com/download/
 ;;
 ;; Emacs will give an autocomplete list of fontspec strings in response to
@@ -45,19 +48,25 @@
 
 (defun rdj-small-font ()
   (if rdj-is-mac
-      "-*-menlo-*-r-*-*-12-*-*-*-*-*-*-*"
+      (if 1
+          "-*-Iosevka-ultralight-*-*-*-15-*-*-*-*-*-*-*"
+          "-*-menlo-*-r-*-*-12-*-*-*-*-*-*-*")
     "-*-consolas-*-r-*-*-12-*-*-*-*-*-*-*"
     )
   )
 (defun rdj-big-font   ()
   (if rdj-is-mac
-      "-*-Input Mono Narrow-ultralight-normal-extracondensed-*-14-*-*-*-*-*-*-*"
+      (if 1
+          "-*-Iosevka-ultralight-*-*-*-15-*-*-*-*-*-*-*"
+          "-*-Input Mono Narrow-ultralight-normal-extracondensed-*-14-*-*-*-*-*-*-*")
     "-*-consolas-*-r-*-*-14-*-*-*-*-*-*-*"
     )
   )
 (defun rdj-huge-font   ()
   (if rdj-is-mac
-      "-*-menlo-*-r-*-*-15-*-*-*-*-*-*-*"
+      (if 1
+          "-*-Iosevka-ultralight-*-*-*-15-*-*-*-*-*-*-*"
+          "-*-menlo-*-r-*-*-15-*-*-*-*-*-*-*")
     "-*-consolas-*-r-*-*-15-*-*-*-*-*-*-*"
     )
   )
@@ -76,10 +85,10 @@
 
 (defun rdj-smartsize-frame-for (display-width display-height)
   (apply 'rdj-setup-frame (cond    ; +X  +Y   WxH  FONT
-    ((= display-width 1440)   (list   0  22 177 46 (rdj-big-font)))
-    ((= display-width 1680)   (list   1  22 184 52 (rdj-huge-font)))
+    ((= display-width 1440)   (list   0  22 177 20 (rdj-big-font)))
+    ((= display-width 1680)   (list   1  22 207 52 (rdj-small-font)))
     ((= display-width 1920)   (list 175  50 225 72 (rdj-small-font)))
-    ((= display-width 2560)   (list 240  50 260 75 (rdj-big-font)))
+    ((= display-width 2560)   (list 240  22 250 70 (rdj-big-font)))
     ((< display-width 1920)   (list   0  22 180 50 (rdj-small-font)))
     ((< display-height 1600)  (list 261  50 260 76 (rdj-big-font)))
     ((>= display-height 1920) (list 261 125 260 80 (rdj-big-font)))
