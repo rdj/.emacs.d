@@ -133,5 +133,6 @@
 
 (projectile-global-mode)
 (setq projectile-use-git-grep 't)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (provide 'rdj-prog)
