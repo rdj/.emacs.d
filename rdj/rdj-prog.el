@@ -63,7 +63,9 @@
 (rdj-setup-prog-mode-hook 'css-mode-hook) ;; css-mode doesn't run prog-mode-hook
 
 ;; LaTeX
-(aput 'auto-mode-alist "\\.tex\\'" 'latex-mode)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 
 ;; Perl
 (aput 'auto-mode-alist "\\.\\([pP][Llm]\\|t\\)\\'" 'cperl-mode)

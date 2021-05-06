@@ -40,6 +40,7 @@
 ;; Add in your own as you wish:
 (defvar rdj-packages
   '(
+    auctex
     ag
     coffee-mode
     csharp-mode
