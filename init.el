@@ -34,6 +34,8 @@
 (require 'cl)
 (require 'assoc)
 
+(push "/usr/local/share/emacs/site-lisp" load-path)
+
 ;; My files are in .emacs.d/rdj
 (setq rdj-elisp-path (concat user-emacs-directory "rdj/"))
 (push rdj-elisp-path load-path)
