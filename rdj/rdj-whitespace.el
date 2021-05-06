@@ -49,6 +49,7 @@
   lisp-mode
   perl-mode
   php-mode
+  python-mode
   makefile-mode
   nxhtml-mode
   nxml-mode
