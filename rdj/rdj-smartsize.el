@@ -46,30 +46,9 @@
 ;;        (propertize str 'font-lock-face `(:family ,ff))               ff "\n")
 ;;       ))
 
-(defun rdj-small-font ()
-  (if rdj-is-mac
-      (if 1
-          "-*-Iosevka-ultralight-*-*-*-15-*-*-*-*-*-*-*"
-          "-*-menlo-*-r-*-*-12-*-*-*-*-*-*-*")
-    "-*-consolas-*-r-*-*-12-*-*-*-*-*-*-*"
-    )
-  )
-(defun rdj-big-font   ()
-  (if rdj-is-mac
-      (if 1
-          "-*-Iosevka-ultralight-*-*-*-15-*-*-*-*-*-*-*"
-          "-*-Input Mono Narrow-ultralight-normal-extracondensed-*-14-*-*-*-*-*-*-*")
-    "-*-consolas-*-r-*-*-14-*-*-*-*-*-*-*"
-    )
-  )
-(defun rdj-huge-font   ()
-  (if rdj-is-mac
-      (if 1
-          "-*-Iosevka-ultralight-*-*-*-15-*-*-*-*-*-*-*"
-          "-*-menlo-*-r-*-*-15-*-*-*-*-*-*-*")
-    "-*-consolas-*-r-*-*-15-*-*-*-*-*-*-*"
-    )
-  )
+(defun rdj-small-font () "-*-Iosevka-light-*-*-*-15-*-*-*-*-*-*-*")
+(defun rdj-big-font   () "-*-Iosevka-light-*-*-*-18-*-*-*-*-*-*-*")
+(defun rdj-huge-font   () "-*-Iosevka-light-*-*-*-18-*-*-*-*-*-*-*")
 
 (defun rdj-change-font (fontspec) "Change the current and default frame font"
   (interactive)
