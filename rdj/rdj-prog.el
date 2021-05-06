@@ -135,4 +135,10 @@
 (setq projectile-use-git-grep 't)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
+;; LillyPond music notation
+(when rdj-is-mac
+  (push "/Applications/LilyPond.app/Contents/Resources/share/emacs/site-lisp/" load-path)
+  (autoload 'LilyPond-mode "lilypond-mode")
+  (aput 'auto-mode-alist "\\.ly\\'" 'LilyPond-mode))
+
 (provide 'rdj-prog)
