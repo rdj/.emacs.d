@@ -70,6 +70,6 @@
 
 
 ;; Color theme
-(load-theme 'zenburn)
+(load-theme 'sanityinc-tomorrow-night)
 
 (provide 'rdj-theme)

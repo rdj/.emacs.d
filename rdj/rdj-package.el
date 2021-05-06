@@ -58,7 +58,7 @@
     swift-mode
     unicode-fonts
     yaml-mode
-    zenburn-theme
+    color-theme-sanityinc-tomorrow
     )
   "A list of packages to ensure are installed at launch.")
 
