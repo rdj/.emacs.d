@@ -143,4 +143,9 @@
   (autoload 'LilyPond-mode "lilypond-mode")
   (aput 'auto-mode-alist "\\.ly\\'" 'LilyPond-mode))
 
+;; plantuml UML diagrams
+(add-to-list 'auto-mode-alist '("\\.puml\\'" . plantuml-mode))
+(setq plantuml-executable-path "/usr/local/bin/plantuml")
+(setq plantuml-default-exec-mode 'executable)
+
 (provide 'rdj-prog)

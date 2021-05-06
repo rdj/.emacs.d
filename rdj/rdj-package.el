@@ -53,6 +53,7 @@
     helm-projectile
     magit
     php-mode
+    plantuml-mode
     projectile
     ruby-electric
     smex
