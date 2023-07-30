@@ -142,6 +142,10 @@
   (push "/Applications/LilyPond.app/Contents/Resources/share/emacs/site-lisp/" load-path)
   (autoload 'LilyPond-mode "lilypond-mode")
   (aput 'auto-mode-alist "\\.ly\\'" 'LilyPond-mode))
+  (add-hook 'LilyPond-mode-hook
+            (function (lambda ()
+                        (define-key LilyPond-mode-map (kbd "C-c C-r") 'recompile)))))
+
 
 ;; plantuml UML diagrams
 (add-to-list 'auto-mode-alist '("\\.puml\\'" . plantuml-mode))

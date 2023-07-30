@@ -46,6 +46,7 @@
   js-mode
   js2-mode
   latex-mode
+  LilyPond-mode
   lisp-mode
   perl-mode
   php-mode
@@ -86,7 +87,7 @@
 (add-hook 'before-save-hook 'rdj-whitespace-cleanup)
 
 ;; Allow nuke-trailing-whitespace-p to be set from the modeline
-(aput 'safe-local-variable-values 'rdj-whitespace-should-cleanup-p 't)
+(add-to-list 'safe-local-variable-values '(rdj-whitespace-should-cleanup-p . t))
 
 (defun rdj-toggle-whitespace-cleanup (&optional arg)
   "Toggle whether nuke whitespace when saving the current buffer.
