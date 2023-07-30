@@ -148,4 +148,18 @@
 (setq plantuml-executable-path "/usr/local/bin/plantuml")
 (setq plantuml-default-exec-mode 'executable)
 
+;; golang
+(add-hook 'before-save-hook 'gofmt-before-save)
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd "M-.") 'godef-jump)))
+
+(autoload 'python-mode "python-mode" "Python Mode." t)
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+(setq py-split-window-on-execute 't)
+(setq py-split-window-on-execute-threshold 2)
+(setq py-split-windows-on-execute-function 'split-window-horizontally)
+(add-hook 'python-mode-hook 'py-autopep8-mode)
+;;(setq python-shell-interpreter "python3")
+
 (provide 'rdj-prog)

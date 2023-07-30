@@ -40,13 +40,14 @@
 ;; Add in your own as you wish:
 (defvar rdj-packages
   '(
+    use-package
     auctex
     ag
     coffee-mode
     csharp-mode
     exec-path-from-shell
     flx-ido
-    groovy-mode
+    ;groovy-mode
     haml-mode
     helm
     helm-ag
@@ -55,7 +56,12 @@
     php-mode
     plantuml-mode
     projectile
+    python-mode
+    py-autopep8
+    racket-mode
     ruby-electric
+    rust-mode
+    rustic
     smex
     swift-mode
     unicode-fonts
