@@ -53,7 +53,7 @@
 (defun rdj-change-font (fontspec) "Change the current and default frame font"
   (interactive)
   (set-frame-font fontspec)
-  (aput 'default-frame-alist 'font fontspec)
+  (add-to-list 'default-frame-alist (cons 'font fontspec))
 )
 
 (defun rdj-setup-frame (xpos ypos width height font)

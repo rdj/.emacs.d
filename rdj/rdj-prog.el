@@ -59,7 +59,6 @@
 
 ;; CSS
 (setq-default css-indent-offset 2)
-(aput 'auto-mode-alist "\\.scss\\'" 'css-mode)
 (rdj-setup-prog-mode-hook 'css-mode-hook) ;; css-mode doesn't run prog-mode-hook
 
 ;; LaTeX
@@ -68,10 +67,10 @@
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 
 ;; Perl
-(aput 'auto-mode-alist "\\.\\([pP][Llm]\\|t\\)\\'" 'cperl-mode)
-(aput 'interpreter-mode-alist "perl"     'cperl-mode)
-(aput 'interpreter-mode-alist "perl5"    'cperl-mode)
-(aput 'interpreter-mode-alist "miniperl" 'cperl-mode)
+(add-to-list 'auto-mode-alist '("\\.\\([pP][Llm]\\|t\\)\\'" . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("perl"     . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("perl5"    . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("miniperl" . cperl-mode))
 (setq cperl-autoindent-on-semi t
       cperl-close-paren-offset -4
       cperl-continued-brace-offset -4
@@ -115,16 +114,16 @@
 (add-hook 'org-mode-hook (function (lambda () (flyspell-mode -1))))
 
 ;; XCode Configuration
-(aput 'auto-mode-alist "\\.xcconfig\\'" 'conf-mode)
+(add-to-list 'auto-mode-alist '("\\.xcconfig\\'" . conf-mode))
 
 ;; XML
-(aput 'auto-mode-alist "\\.xml\\'"    'nxml-mode) ;; XML Document
-(aput 'auto-mode-alist "\\.xsd\\'"    'nxml-mode) ;; XML Schema
-(aput 'auto-mode-alist "\\.plist\\'"  'nxml-mode) ;; Apple plist file
-(aput 'auto-mode-alist "\\.wxi\\'"    'nxml-mode) ;; WiX installer
-(aput 'auto-mode-alist "\\.wxs\\'"    'nxml-mode) ;; WiX installer
-(aput 'auto-mode-alist "\\.csproj\\'" 'nxml-mode) ;; VS C# project
-(aput 'auto-mode-alist "\\.xaml\\'"   'nxml-mode) ;; Microsoft XAML file
+(add-to-list 'auto-mode-alist '("\\.xml\\'"    . nxml-mode)) ;; XML Document
+(add-to-list 'auto-mode-alist '("\\.xsd\\'"    . nxml-mode)) ;; XML Schema
+(add-to-list 'auto-mode-alist '("\\.plist\\'"  . nxml-mode)) ;; Apple plist
+(add-to-list 'auto-mode-alist '("\\.wxi\\'"    . nxml-mode)) ;; WiX installer
+(add-to-list 'auto-mode-alist '("\\.wxs\\'"    . nxml-mode)) ;; WiX installer
+(add-to-list 'auto-mode-alist '("\\.csproj\\'" . nxml-mode)) ;; VS C# project
+(add-to-list 'auto-mode-alist '("\\.xaml\\'"   . nxml-mode)) ;; Microsoft XAML
 
 ;; HAML
 (rdj-setup-prog-mode-hook 'haml-mode-hook)
@@ -141,7 +140,7 @@
 (when rdj-is-mac
   (push "/Applications/LilyPond.app/Contents/Resources/share/emacs/site-lisp/" load-path)
   (autoload 'LilyPond-mode "lilypond-mode")
-  (aput 'auto-mode-alist "\\.ly\\'" 'LilyPond-mode))
+  (add-to-list 'auto-mode-alist '("\\.ly\\'" . LilyPond-mode))
   (add-hook 'LilyPond-mode-hook
             (function (lambda ()
                         (define-key LilyPond-mode-map (kbd "C-c C-r") 'recompile)))))

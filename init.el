@@ -31,9 +31,6 @@
 ;; (I call package-initailize in rdj-package /rdj)
 ;(package-initialize)
 
-(require 'cl)
-(require 'assoc)
-
 ;; My files are in .emacs.d/rdj
 (setq rdj-elisp-path (concat user-emacs-directory "rdj/"))
 (push rdj-elisp-path load-path)
