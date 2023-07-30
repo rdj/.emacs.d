@@ -46,7 +46,7 @@
 ;;        (propertize str 'font-lock-face `(:family ,ff))               ff "\n")
 ;;       ))
 
-(defun rdj-small-font () "-*-Iosevka-light-*-*-*-15-*-*-*-*-*-*-*")
+(defun rdj-small-font () "-*-Iosevka-light-*-*-*-18-*-*-*-*-*-*-*")
 (defun rdj-big-font   () "-*-Iosevka-light-*-*-*-18-*-*-*-*-*-*-*")
 (defun rdj-huge-font   () "-*-Iosevka-light-*-*-*-18-*-*-*-*-*-*-*")
 
@@ -67,6 +67,7 @@
     ((= display-width 1440)   (list   0  22 177 20 (rdj-big-font)))
     ((= display-width 1680)   (list   1  22 207 52 (rdj-small-font)))
     ((= display-width 1792)   (list  64  22 207 52 (rdj-small-font)))
+    ((= display-width 1800)   (list  68  22 207 52 (rdj-small-font)))
     ((= display-width 1920)   (list 175  50 225 72 (rdj-small-font)))
     ((= display-width 2560)   (list 240  22 250 70 (rdj-big-font)))
     ((< display-width 1920)   (list   0  22 180 50 (rdj-small-font)))
